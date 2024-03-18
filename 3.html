@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Mnożenie </title>
+</head>
+<body>
+    <header><h1>Mnożenie poziom podstawowy</h1></header>   
+   <section class="lewy">           
+    <img src="obrazek2.png" alt="liczby">              
+   </section>
+   <section class="prawy">
+    <img src="obrazek4.png" alt="liczby">
+   </section>
+   <section class="srodek">
+    <h3>Spróbuj swoich sił!!</h3>
+    <span id="a"></span><span>*</span><span id="b"></span>
+    <span>=</span>
+    <input id="d" type="number"><br>
+    <button onclick="losuj()">Losuj</button><button onclick="sprawdz()">Sprawdz</button>
+    <p id="e"></p>
+    <script>
+       function losuj(){
+            do{
+                a=Math.floor(Math.random()*101);
+                b=Math.floor(Math.random()*101);
+            }
+            while(a*b>100);
+            document.getElementById("a").innerHTML=a;
+            document.getElementById("b").innerHTML=b;
+        }
+
+        function sprawdz(){
+            d=document.getElementById("d").value;
+            if(d==""){
+                alert("Wpisz odpowiedź >:(");
+            }else if(d==a*b){
+            document.getElementById("e").innerHTML="Tak :)";
+        }else{
+        document.getElementById("e").innerHTML="Nie :(";
+        }
+        }
+    </script>
+    <a href="index.html">Powrót do strony głównej</a>
+   </section> 
+   <footer>
+    <div id="zegarek"></div>
+
+<script>
+function zegar() {
+  var data = new Date();
+  var godzina = data.getHours();
+  var min = data.getMinutes();
+  var sek = data.getSeconds();
+  var terazjest = ""+godzina+
+  ((min<10)?":0":":")+min+
+  ((sek<10)?":0":":")+sek;
+  document.getElementById("zegarek").innerHTML = terazjest;
+  setTimeout("zegar()", 1000);
+}
+zegar();
+</script>
+   </footer>
+</body>
+</html>

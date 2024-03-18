@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: cursive
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.prawy{
+    float: right;
+
+}
+.lewy{
+    float: left;
+
+}
+.srodek{
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(62, 62, 62);
+    height: 470px;
+    border: solid 15px ;
+
+
+}
+footer{
+    font-size:20px ;
+}
+header{
+    margin-top: 50px;
+}
+a{
+    color: aliceblue;
+    text-decoration:underline ;
+}
+a:hover{
+   color:lightpink; 
+}
